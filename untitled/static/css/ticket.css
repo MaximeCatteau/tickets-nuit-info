@@ -1,0 +1,29 @@
+.ticket-box{
+    position: relative;
+    border-radius: 10px;
+    border: solid 1px black;
+    margin: 10px 20px 0 20px;
+    padding: 10px;
+}
+
+.button-container{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.ticket-id{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ticket-infos{
+    display: flex;
+}
+
+.ticket-date{
+    padding: 2px;
+    margin: 2px 2px 2px 20px;
+    font-style: italic;
+    color: darkgray;
+}

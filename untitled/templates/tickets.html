@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tickets</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/ticket.css')}}">
+</head>
+<body>
+    {% if result %}
+        {% for row in result %}
+            {% if not row[6] %}
+                <!-- Ticket box-->
+                <div class="ticket-box">
+                    <!-- Ligne id ticket + date -->
+                    <div class="ticket-infos">
+                        <!-- id ticket -->
+                        <div class="ticket-id">Ticket#{{ row[0] }}</div>
+                        <!-- end id ticket -->
+                        <div class="ticket-date">{{row[5]}}</div>
+                    <!-- end ligne id ticket + date -->
+                    </div>
+                    <!-- ligne team name -->
+                    <div class="team-name"><b>Nom de l'équipe :</b> {{ row[2] }}</div>
+                    <div class="ip-address"><b>Adresse IP :</b> {{ row[3] }}</div>
+                    <!-- problem title -->
+                    <div class="problem-title"><b>Titre du problème :</b> {{ row[1] }}</div>
+                    <!-- problem desc -->
+                    <div class="problem-desc"><b>Description :</b> {{ row[4] }}</div>
+                    <!-- archive button -->
+                    <div class="button-container">
+                        <form action="" method="POST">
+                            <button type="submit" name="archive" value="{{ row[0] }}" class="btn btn-success archive-button">Archiver</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- End ticket box-->
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ticket Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <form action="" method="POST">
+                    <div class="form-group">
+                        <label for="team_name">Nom de votre équipe</label>
+                        <input type="text" class="form-control" id="team_name" name="team_name" placeholder="Ex : Les M2 E-Services">
+                    </div>
+                    <div class="form-group">
+                        <label for="ip_address">Adresse IP</label>
+                        <input type="text" class="form-control" id="ip_address" name="ip_address" placeholder="Ex : 127.0.0.1">
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Titre du problème</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Ex : Mon écran ne marche pas">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description du problème</label>
+                        <input type="text" class="form-control" id="description" name="description" placeholder="Ex : Quand j'allume mon écran ça fait...">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
